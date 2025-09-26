@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # 3'th Party
     'rest_framework',
-    'corsheaders',
+    "corsheaders",
     # Local
     'accounts',
     'posts',
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny'
+        'rest_framework.permissions.IsAuthenticated'
     ], }
 
 MIDDLEWARE = [
@@ -63,11 +63,11 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = (
-    'http:localhost:3000',
-    'http:localhost:8000',
+    'http://localhost:3000',
+    'http://localhost:8000',
 )
 
-CRF_TRUSTED_ORIGINS = ['http:localhost:3000']
+CRF_TRUSTED_ORIGINS = ['http://localhost:3000']
 
 ROOT_URLCONF = 'django_project.urls'
 
