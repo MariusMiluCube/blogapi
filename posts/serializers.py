@@ -10,3 +10,9 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ('id', 'author', 'title', 'body', 'created_at')
         model = Post
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = ('id', 'username')
+        model = get_user_model()
